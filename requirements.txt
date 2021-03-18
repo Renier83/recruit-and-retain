@@ -1,0 +1,10 @@
+# Definitely needed for Flask-powered Web Apps
+gunicorn==20.0.4
+Jinja2==2.11.2
+Werkzeug==1.0.1
+
+# Needed for this specific app
+Flask==1.1.2
+pandas==1.1.5
+Flask-RESTful==0.3.6
+gunicorn==19.7.1

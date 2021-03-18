@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="shortcut icon" type="image/ico" href="/info/img/favicon (1).ico">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <title>Recruit & Retain</title>
     <link rel="stylesheet" type="text/css" href="/info/styles/styles.css">
 
@@ -12,7 +16,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/index.html">
+      <a class="navbar-brand" href="/info/templates/index.html">
         <img src="/info/img/RR LOGO.png" alt="" width="30" height="24" class="d-inline-block align-top">
         <span> &nbsp;&nbsp;Recruit & Retain</span>
       </a>
@@ -26,9 +30,9 @@
               Dropdown
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/index.html">Home</a></li>
-              <li><a class="dropdown-item" href="/past.html">Portfolio</a></li>
-              <li><a class="dropdown-item" href="/project.html">Your Data</a></li>
+              <li><a class="dropdown-item" href="/info/templates/index.html">Home</a></li>
+              <li><a class="dropdown-item" href="/info/templates/past.html">Portfolio</a></li>
+              <li><a class="dropdown-item" href="/info/templates/project.html">Your Data</a></li>
             </ul>
           </li>
         
@@ -45,17 +49,20 @@
       <!-- Main Input For Receiving Query to our ML -->
       <form action="{{ url_for('predict')}}"method="post">
         
-        <input type="text" name="MonthlyIncome" placeholder="Monthly Income" required="required" />
-        <input type="text" name="TotalWorkingYears" placeholder="No of Years Worked" required="required" />
         <input type="text" name="Age" placeholder="Age" required="required" />
-        <input type="text" name="NumCompaniesWorked" placeholder="No of Companies Worked" required="required" />
-        <input type="text" name="DistanceFromHome" placeholder="Distance from Home" required="required" />
-        <input type="text" name="YearsAtCompany" placeholder="Years at Company" required="required" />
-        <input type="text" name="OverTime_No" placeholder="OverTime_No" required="required" />
-        <input type="text" name="OverTime_Yes" placeholder="OverTime_Yes" required="required" />
-        
-        
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        <input type="text" name="DistanceFromHome" placeholder="DistanceFromHome" required="required" />
+        <input type="text" name="TotalWorkingYears" placeholder="TotalWorkingYears" required="required" />
+        <input type="text" name="YearsInCurrentRole" placeholder="YearsInCurrentRole" required="required" />
+        <input type="text" name="JobLevel" placeholder="JobLevel" required="required" />
+        <input type="text" name="JobSatisfaction" placeholder="JobSatisfaction" required="required" />
+        <input type="text" name="MonthlyIncome" placeholder="MonthlyIncome" required="required" />
+        <input type="text" name="StandardHours" placeholder="StandardHours" required="required" />
+        <input type="text" name="WorkLifeBalance" placeholder="WorkLifeBalance" required="required" />
+        <input type="text" name="YearsSinceLastPromotion" placeholder="YearsSinceLastPromotion" required="required" />
+        <input type="text" name="YearsWithCurrManager" placeholder="YearsWithCurrManager" required="required" />
+
+
+          <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
       </form>
     <br>
     <br>
