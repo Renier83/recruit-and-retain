@@ -42,7 +42,7 @@ h1, p{
 }
 
 .hero1{
-    background-image: url("/info/img/pexels-canva-studio-3194519.jpg");
+    background-image: url("/static/img/pexels-canva-studio-3194519.jpg");
     
 }
 .hero::after{
@@ -59,12 +59,13 @@ h1, p{
     z-index:1;
 }
 .hero2{
-    background-image: url("/info/img/pexels-fauxels-3184291.jpg");
+    background-image: url("/static/img/pexels-fauxels-3184291.jpg");
+    
    
 }
 
 .hero3{
-    background-image: url("/info/img/pexels-fauxels-3184357.jpg");
+    background-image: url("/static/img/pexels-fauxels-3184357.jpg");
    
 }
 .carousel-control-next-icon, .carousel-control-prev-icon{

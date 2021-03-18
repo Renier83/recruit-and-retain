@@ -4,20 +4,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="shortcut icon" type="image/ico" href="/info/img/favicon (1).ico">
+    <link rel="shortcut icon" type="image/ico" href="/static/img/favicon (1).ico">
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <title>Recruit & Retain</title>
-    <link rel="stylesheet" type="text/css" href="/info/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
 
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/templates/index.html">
-        <img src="/info/img/RR LOGO.png" alt="" width="30" height="24" class="d-inline-block align-top">
+      <a class="navbar-brand" href="/">
+        <img src="/static/img/RR LOGO.png" alt="" width="30" height="24" class="d-inline-block align-top">
         <span> &nbsp;&nbsp;Recruit & Retain</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,9 +30,9 @@
               Dropdown
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/templates/index.html">Home</a></li>
-              <li><a class="dropdown-item" href="/templates/past.html">Portfolio</a></li>
-              <li><a class="dropdown-item" href="/templates/project.html">Your Data</a></li>
+              <li><a class="dropdown-item" href="/">Home</a></li>
+              <li><a class="dropdown-item" href="/past">Portfolio</a></li>
+              <li><a class="dropdown-item" href="/project">Your Data</a></li>
             </ul>
           </li>
         
@@ -42,33 +42,59 @@
     </div>
   </nav>
 
-  
   <div class="login">
     <h1>Predict </h1>
-
+​
       <!-- Main Input For Receiving Query to our ML -->
-      <form action="{{ url_for('predict')}}"method="post">
+        <form action="{{ url_for ('predict') }}" method="POST">
         
         <input type="text" name="Age" placeholder="Age" required="required" />
         <input type="text" name="DistanceFromHome" placeholder="DistanceFromHome" required="required" />
         <input type="text" name="TotalWorkingYears" placeholder="TotalWorkingYears" required="required" />
+        <br>
         <input type="text" name="YearsInCurrentRole" placeholder="YearsInCurrentRole" required="required" />
-        <input type="text" name="JobLevel" placeholder="JobLevel" required="required" />
-        <input type="text" name="JobSatisfaction" placeholder="JobSatisfaction" required="required" />
+        <input type="text" name="JobLevel" placeholder="JobLevel (1-Lowest, 4-Highest)" required="required" />
+        <input type="text" name="JobSatisfaction" placeholder="JobSatisfaction (1-Lowest, 4-Highest)" required="required" />
+        <br>
         <input type="text" name="MonthlyIncome" placeholder="MonthlyIncome" required="required" />
         <input type="text" name="StandardHours" placeholder="StandardHours" required="required" />
-        <input type="text" name="WorkLifeBalance" placeholder="WorkLifeBalance" required="required" />
+        <input type="text" name="WorkLifeBalance" placeholder="WorkLifeBalance (1-Lowest, 4-Highest)" required="required" />
+        <br>
         <input type="text" name="YearsSinceLastPromotion" placeholder="YearsSinceLastPromotion" required="required" />
         <input type="text" name="YearsWithCurrManager" placeholder="YearsWithCurrManager" required="required" />
-
-
+​
+        <br>
           <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
       </form>
     <br>
     <br>
     {{ prediction_text }}
-
-
+    <br>
+    <br>
+    {{ age_text }}
+    <br>
+    {{ distance_text }}
+    <br> 
+    {{ level_text}}
+    <br>
+    {{ satisfaction_text }}
+    <br>
+    {{ income_text }}
+    <br>
+    {{ hours_text }}
+    <br>
+    {{ workyears_text }}
+    <br>
+    {{ balance_text }}
+    <br>
+    {{ role_text }}
+    <br>
+    {{ promotion_text }}
+    <br>
+    {{ mgr_text }}
+    
+​
+​
     </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
