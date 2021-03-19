@@ -27,7 +27,7 @@
         <ul class="navbar-nav">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
+              Menu
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="/">Home</a></li>
@@ -41,61 +41,75 @@
       </div>
     </div>
   </nav>
-
-  <div class="login">
-    <h1>Predict </h1>
-​
-      <!-- Main Input For Receiving Query to our ML -->
-        <form action="{{ url_for ('predict') }}" method="POST">
+  <div class="container-fluid">
+  
+    <div class="row">
+      <div class="col-md-4">
+       
+      </div> 
+      <div class="col-md-4">
+        <div class="login">
+          <h1>Employee Retention Prediction </h1>
+      ​
+            <!-- Main Input For Receiving Query to our ML -->
+              <form action="{{ url_for ('predict') }}" method="POST">
+              
+              <input type="text" name="Age" placeholder="Age" required="required" />
+              <input type="text" name="DistanceFromHome" placeholder="DistanceFromHome" required="required" />
+              <input type="text" name="TotalWorkingYears" placeholder="TotalWorkingYears" required="required" />
+              <br>
+              <input type="text" name="YearsInCurrentRole" placeholder="YearsInCurrentRole" required="required" />
+              <input type="text" name="JobLevel" placeholder="JobLevel (1-Lowest, 4-Highest)" required="required" />
+              <input type="text" name="JobSatisfaction" placeholder="JobSatisfaction (1-Lowest, 4-Highest)" required="required" />
+              <br>
+              <input type="text" name="MonthlyIncome" placeholder="MonthlyIncome" required="required" />
+              <input type="text" name="StandardHours" placeholder="StandardHours" required="required" />
+              <input type="text" name="WorkLifeBalance" placeholder="WorkLifeBalance (1-Lowest, 4-Highest)" required="required" />
+              <br>
+              <input type="text" name="YearsSinceLastPromotion" placeholder="YearsSinceLastPromotion" required="required" />
+              <input type="text" name="YearsWithCurrManager" placeholder="YearsWithCurrManager" required="required" />
+      ​
+              <br>
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+          <br>
+          <br>
+          {{ prediction_text }}
+          <br>
+          <br>
+          {{ age_text }}
+          <br>
+          {{ distance_text }}
+          <br> 
+          {{ level_text}}
+          <br>
+          {{ satisfaction_text }}
+          <br>
+          {{ income_text }}
+          <br>
+          {{ hours_text }}
+          <br>
+          {{ workyears_text }}
+          <br>
+          {{ balance_text }}
+          <br>
+          {{ role_text }}
+          <br>
+          {{ promotion_text }}
+          <br>
+          {{ mgr_text }}
+          
+      ​
+      ​
+          </div>
+      </div> 
+      <div class="col-md-4">
         
-        <input type="text" name="Age" placeholder="Age" required="required" />
-        <input type="text" name="DistanceFromHome" placeholder="DistanceFromHome" required="required" />
-        <input type="text" name="TotalWorkingYears" placeholder="TotalWorkingYears" required="required" />
-        <br>
-        <input type="text" name="YearsInCurrentRole" placeholder="YearsInCurrentRole" required="required" />
-        <input type="text" name="JobLevel" placeholder="JobLevel (1-Lowest, 4-Highest)" required="required" />
-        <input type="text" name="JobSatisfaction" placeholder="JobSatisfaction (1-Lowest, 4-Highest)" required="required" />
-        <br>
-        <input type="text" name="MonthlyIncome" placeholder="MonthlyIncome" required="required" />
-        <input type="text" name="StandardHours" placeholder="StandardHours" required="required" />
-        <input type="text" name="WorkLifeBalance" placeholder="WorkLifeBalance (1-Lowest, 4-Highest)" required="required" />
-        <br>
-        <input type="text" name="YearsSinceLastPromotion" placeholder="YearsSinceLastPromotion" required="required" />
-        <input type="text" name="YearsWithCurrManager" placeholder="YearsWithCurrManager" required="required" />
-​
-        <br>
-          <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-      </form>
-    <br>
-    <br>
-    {{ prediction_text }}
-    <br>
-    <br>
-    {{ age_text }}
-    <br>
-    {{ distance_text }}
-    <br> 
-    {{ level_text}}
-    <br>
-    {{ satisfaction_text }}
-    <br>
-    {{ income_text }}
-    <br>
-    {{ hours_text }}
-    <br>
-    {{ workyears_text }}
-    <br>
-    {{ balance_text }}
-    <br>
-    {{ role_text }}
-    <br>
-    {{ promotion_text }}
-    <br>
-    {{ mgr_text }}
-    
-​
-​
+      </div> 
     </div>
+  </div>
+
+ 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
 </html>
