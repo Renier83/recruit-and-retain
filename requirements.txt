@@ -13,5 +13,5 @@ pickle
 numpy
 sklearn
 #seaborn==0.11.1
-tensorflow
+tensorflow-cpu
 Keras
