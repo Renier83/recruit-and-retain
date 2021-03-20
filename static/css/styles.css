@@ -1,8 +1,8 @@
 
 
-
 body {
-    background-color:snow
+    background-color:snow;
+    background-image:url("/static/img/background.png") ;
 }
 .navbar {
     background-color:#013369 !important;
@@ -129,5 +129,31 @@ h1, p{
 .login h1{
     text-align:center;
     
+}
+
+/* Setting machinelearning input form font size */
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-size: 13px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 9pt; 
+}
+
+ ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    font-size: 12px;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+    font-size: 9pt; 
+}
+ 
+.results h3, p{
+    color:#013369;
+    text-align: center;
+}
+
+.ml-row {
+    padding-bottom: 20px;
 }
 
