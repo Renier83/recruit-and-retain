@@ -9,7 +9,7 @@ pandas
 #Flask-RESTful==0.3.6
 pymysql
 sqlalchemy
-pickle
+pickleshare
 numpy
 sklearn
 #seaborn==0.11.1
