@@ -1,17 +1,17 @@
 # Definitely needed for Flask-powered Web Apps
-gunicorn==20.0.4
-Jinja2==2.11.2
-Werkzeug==1.0.1
+gunicorn
+Jinja2
+Werkzeug
 
 # Needed for this specific app
-Flask==1.1.2
-pandas==1.1.5
+Flask
+pandas
 #Flask-RESTful==0.3.6
-pymysql==1.0.2
-sqlalchemy==1.4.1
-pickleshare==0.7.5
-numpy==1.19.2
-sklearn==0.0
+pymysql
+sqlalchemy
+pickle
+numpy
+sklearn
 #seaborn==0.11.1
-tensorflow==2.4.1
-Keras==2.4.3
+tensorflow
+Keras
